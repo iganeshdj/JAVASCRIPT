@@ -436,7 +436,7 @@ do {
 
 //FOR - IN
 
-const person = {
+/*const person = {
     name: 'ganesh',
     age:22,
     gender:'male'
@@ -451,7 +451,7 @@ for (let key in person) {
     
     for(let key in colors){
         console.log(colors[key]);
-    }
+    }*/
 
 
 // DOT Notation

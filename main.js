@@ -445,14 +445,14 @@ do {
 for (let key in person) {
     // code
     console.log(key + ":", person[key]);
-    }
+    }*/
 
+  /* //array
     let colors = ['red', 'blue', 'green' ];
     
     for(let key in colors){
         console.log(colors[key]);
     }*/
-
 
 // DOT Notation
 //person.name
@@ -460,24 +460,191 @@ for (let key in person) {
 //person['name']
 
 
+// ### FOR OF LOOP ####
+
+/*let colors = ['red', 'blue', 'green' ];
+    
+    for(let key in colors){
+        console.log(colors[key]);
+    }
+
+    for(let color of colors){
+        console.log("COlor: " + color);
+    } */
+
+
+// creating object & function
+
+//function 
+/*let name = "Anbu";
+let age = 24;
+let interest = ['Creating, teaching new things.'];
+
+let address = {
+    city: "Chennai",
+    state: "Tamil Nadu",
+} 
+
+function greeting(){
+    //let msg = "My name is " + name + ", i love " + interest;
+    
+    let msg = 'My name is ${name}, i love ${interest}';
+    console.log(msg);
+}
+    //console.log(msg);
+}
+
+greeting(); */ //function call
+
+// object in function (OOP)
+
+/*let person = {
+    name: "Anbu",
+    age: 24,
+    interest: ['Creating, teaching new things.'],
+    isAlive: true,
+    address: {
+    city: "Chennai",
+    state: "Tamil Nadu",
+    },
+   
+greeting: function(){
+    let msg = `My name is ${this.name}, i love ${this.interest}`;
+    console.log(msg);
+}
+};
+
+console.log(person.greeting());*/
+
+
+//factory functions
+/*function createPersion(name){ //camelcase-> myName
+return{
+    //name: name, 
+    name, 
+    greeting(){
+        let msg = `My name is ${this.name}`;
+        console.log(msg);
+    }
+    
+        
+     };
+}
+
+let ganesh = createPersion("Ganesh");
+ganesh.greeting();
+let trisha = createPersion("Trisha");
+trisha.greeting();*/
+
+// Constructor Function
+
+/*function Person(name){  //pascal-> MyFirstName
+     this.name = name;
+     this.greeting = function(){
+        console.log(`My name is ${this.name}`);
+     }
+
+}  
+
+let person = new Person("Ganesh");
+let x = {}
+person.greeting();*/
+
+//DYNAMIC OBJECT
+
+/*const person = {
+    name: "Ganesh"
+}
+
+person.age = 22;
+person.greeting = function(){}
+
+delete person.greeting;
+delete person.age;
+
+console.log(person);*/
+
+//reference data types
+
+/*let x = {
+    value: 10
+};
+
+let y = x;
+x.value = 20;*/
+
+//primitive
+/*let cart = 5;
+
+function updateCart(cart){ //localscope
+    cart++;
+}
+
+updateCart(cart);
+
+console.log("Carts available:" +cart);*/
+
+/*let cartObj = { //reference type
+    value: 5
+};
+
+function updateCart(cart){ //localscope
+    cart.value++;
+}
+
+updateCart(cartObj);
+
+console.log("Carts available:", cartObj);*/
+
+//enumurating properties of an bject
+
+/*const user = {
+    name: 'Ganesh',
+    getFullName(){
+        console.log(`My name is ${this.name}`);
+    }
+}
+
+for (let key in user)
+    console.log(key, user[key]);
+
+
+for (let key of Object.keys(user))
+    console.log(key);
 
 
 
+for (let entry of Object.entries(user))
+    console.log(entry);
+*/
+/*const user = {
+    name: 'Ganesh',
+    getFullName(){
+        console.log(`My name is ${this.name}`);
+    }
+}
 
+if('name' in user){
+    console.log("yes!");
+}*/
 
+const user = {
+    name: 'Ganesh',
+    getFullName(){
+        console.log(`My name is ${this.name}`);
+    }
+}
 
+/*let another = Object.assign({
+    age: 22
+}, user);
 
+console.log(another);*/
 
-
-
-
-
-
-
-
-
-
-
+let another = {
+    ...user     //spread operator
+}
+console.log(another);
 
 
 
